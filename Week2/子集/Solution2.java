@@ -1,8 +1,11 @@
-import java.awt.List;
+package submit.Week2.子集;
 
-public class Solution2 {   //递归
+import java.util.List;
+import java.util.ArrayList;
+
+public class Solution2 {   //递归 DFS
     List<Integer> t = new ArrayList<Integer>();
-    List<List<Integer>> and = new ArrayList<List<Integer>>();
+    List<List<Integer>> ans = new ArrayList<List<Integer>>();
     public List<List<Integer>> sbusets(int[] nums) {
         dfs(0,nums);
         return ans;

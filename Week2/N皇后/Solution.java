@@ -1,3 +1,8 @@
+package submit.Week2.N皇后;
+
+import java.util.*;
+// https://leetcode-cn.com/problems/n-queens/
+
 public class Solution {
     public List<List<String>> solveNQueens(int n) {
         List<List<String>> solutions = new ArrayList<List<String>>();
@@ -16,6 +21,7 @@ public class Solution {
             solutions.add(board);
         } else {
             for (int i = 0; i < n; i++) {
+                //冲突情况跳过
                 if (col.contains(i)) 
                     continue;
                 int p = row + i;  //左斜对角
@@ -40,7 +46,7 @@ public class Solution {
         }
     }
 
-    public List<String> generateBoard(int[] queens, int n) {
+    public List<String> generateBoard(int[] queens, int n) {  //解法生成
         List<String> board = new ArrayList<String>();
         for (int i = 0; i < n; i++) {
             char[] row = new char[n];
@@ -49,5 +55,23 @@ public class Solution {
             board.add(new String(row));
         }
         return board;
+    }
+
+    public void printBor(List<List<String>> solutions) {  //打印输出函数
+        for (int i=0;i<solutions.size();i++) {
+            for (int j=0;j<solutions.get(i).size();j++) {
+                System.out.print(solutions.get(i).get(j));
+                System.out.println();
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main (String[] args) {
+        Solution s = new Solution();
+        List<List<String>> solutions = s.solveNQueens(5); //测试用例5*5
+        s.printBor(solutions);
+        System.out.println(solutions.size());
+        return;
     }
 }

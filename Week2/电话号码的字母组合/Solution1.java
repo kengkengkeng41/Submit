@@ -1,3 +1,9 @@
+package submit.Week2.电话号码的字母组合;
+
+import java.util.ArrayList;
+import java.util.List;
+// https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/
+
 public class Solution1 {  //DFS
     // public List<String> letterCombinations(String digits) {
     //     List<String> res = new ArrayList<String>();
@@ -35,5 +41,12 @@ public class Solution1 {  //DFS
             dfs(res,index+1,input,sb.append(c));
             sb.deleteCharAt(sb.length()-1);
         }
+    }
+
+
+    public static void main (String [] args) {
+        Solution1 s = new Solution1();
+        System.out.println(s.letterCombinations("234"));
+        return;
     }
 }

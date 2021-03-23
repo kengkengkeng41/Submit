@@ -1,3 +1,6 @@
+package submit.Week2.岛屿数量;
+
+// https://leetcode-cn.com/problems/number-of-islands/
 public class Solution {
     public int numIslands(char[][] grid) {
         if (grid==null || grid.length==0) return 0;
@@ -21,5 +24,17 @@ public class Solution {
         wipe(grid, i + 1, j);
         wipe(grid, i, j - 1);
         wipe(grid, i, j + 1);
+    }
+
+    public static void main (String [] args) {
+        Solution s = new Solution();
+        char[][] grid = new char[][]{    //测试用例有2个岛
+                {'1','1','1','1','0'},
+                {'1','1','0','1','0'},
+                {'0','0','0','1','0'},
+                {'1','1','0','1','0'}
+        };
+        System.out.println(s.numIslands(grid));
+        return;
     }
 }
