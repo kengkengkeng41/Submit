@@ -1,6 +1,8 @@
 package submit.Week3.解码方法;
 
 // https://leetcode-cn.com/problems/decode-ways/
+//若脑图无法预览可看以下网站我的题解
+// https://leetcode-cn.com/problems/decode-ways/solution/nao-tu-fen-xi-dong-tai-gui-hua-by-206663-fh5k/
 
 public class Solution {
     //能使解法方法增加的唯一途径是：既能独立解码，又能结合解码的字符的存在
